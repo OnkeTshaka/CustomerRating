@@ -201,6 +201,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\Result.jpg" />
     <Content Include="Images\StarFade.gif" />
     <Content Include="Images\StarGlow.gif" />
     <Content Include="Scripts\bootstrap.js" />
