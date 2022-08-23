@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en-za">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("head", required: false)
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span style="display:flex">
+                @Html.ActionLink("Rating System", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <img src="~/Content/Images/star-off.png" width="20" height="20" style="margin-top:14px;"/>
+                </span>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Articles", "Index", "Articles")</li>
+                    <li>@Html.ActionLink("Comments", "Index", "ArticlesComments")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <main class="body-content">
+        @RenderBody()
+    </main>
+    <footer>
+        @DateTime.Now.ToLongDateString()
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
