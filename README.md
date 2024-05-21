@@ -1,4 +1,4 @@
-# Star Rating System
+# Customer Rating Feature
 
 ASP. NET MVC 5 C#
 
